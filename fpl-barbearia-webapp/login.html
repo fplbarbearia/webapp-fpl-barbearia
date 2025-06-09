@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FPL Barbearia - Login</title>
+  <link rel="stylesheet" href="estilo.css" />
+</head>
+<body>
+  <div class="container">
+    <img src="logotipo-fpl.png" alt="Logotipo FPL Barbearia" class="logo" />
+
+    <h1>FPL Barbearia</h1>
+    <p class="slogan">Não é apenas um corte, é autoestima renovada 💈📏</p>
+
+    <form id="login-form">
+      <label for="telefone">📱 Seu WhatsApp:</label>
+      <input type="tel" id="telefone" name="telefone" placeholder="(21) 96917-8915" required />
+
+      <button type="button" onclick="enviarCodigo()">Receber código de acesso</button>
+
+      <div id="verificacao" style="display: none;">
+        <label for="codigo">🔐 Código recebido:</label>
+        <input type="text" id="codigo" name="codigo" placeholder="Digite o código" required />
+        <button type="submit">Entrar no sistema</button>
+      </div>
+    </form>
+
+    <a href="#" class="novo-cliente">Sou cliente novo</a>
+    <p class="termos">
+      Ao entrar, você aceita nossa política de privacidade.
+    </p>
+  </div>
+
+  <script>
+    function enviarCodigo() {
+      const telefone = document.getElementById("telefone").value;
+      if (!telefone) {
+        alert("Por favor, digite seu número de telefone.");
+        return;
+      }
+      alert("Código enviado via WhatsApp! Use: 123456");
+      document.getElementById("verificacao").style.display = "block";
+    }
+
+    document.getElementById("login-form").addEventListener("submit", function (e) {
+      e.preventDefault();
+      const codigo = document.getElementById("codigo").value;
+      if (codigo === "123456") {
+        window.location.href = "agenda.html";
+      } else {
+        alert("Código incorreto.");
+      }
+    });
+  </script>
+</body>
+</html>

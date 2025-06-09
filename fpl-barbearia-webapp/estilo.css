@@ -1,0 +1,65 @@
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f7f7f7;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.container {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+.logo {
+  width: 80px;
+  margin-bottom: 15px;
+}
+h1 {
+  margin: 0;
+  color: #333;
+}
+.slogan {
+  font-size: 0.9em;
+  margin-bottom: 25px;
+  color: #777;
+}
+input {
+  width: 100%;
+  padding: 12px;
+  margin-top: 8px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+button {
+  width: 100%;
+  padding: 12px;
+  background-color: #d62828;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #b91d1d;
+}
+.novo-cliente {
+  display: block;
+  margin-top: 15px;
+  color: #555;
+  font-size: 0.9em;
+}
+.termos {
+  font-size: 0.7em;
+  color: #aaa;
+  margin-top: 20px;
+}
